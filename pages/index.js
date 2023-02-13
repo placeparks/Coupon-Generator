@@ -5,8 +5,9 @@ export default function Component() {
   const [tokenId, setTokenId] = useState('');
   const[user, setUserAdd] = useState();
   const [expires, setExpire] = useState();
+  const [value, setValue] = useState();
   return (
-
+<div>
 <div className="container">
 
     <label className='token'>Token ID</label>
@@ -25,6 +26,14 @@ export default function Component() {
             onChange={(e) => setUserAdd(e.target.value)}
             placeholder='User/Brand Name'
           /><br/>
+          <label className='value'>Value</label>
+          <input
+            className='inputs'
+            type='text'
+            value={user}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder='Enter the coupon-value'
+          /><br/>
           <label className='expire'>Expires</label>
            <input
             className='inputs'
@@ -32,15 +41,18 @@ export default function Component() {
             value={expires}
             onChange={(e) => setExpire(e.target.value)}
             placeholder='Expiry date'
-          /><br/>
+          /><br/><br/>
     <Web3Button
-      contractAddress="0x4eB0470A0aC629685d0Df4De4DE6BB4748EfbcDe"
+      contractAddress="0x5956c127EBa8cdD0CC8ddb7d06Abba4fdB8c376a"
       action={(contract) => {
-        contract.call("setUser", tokenId, user, expires)
+        contract.call("setUser", tokenId, user, value, expires)
       }}
     >
       Generate Coupons
     </Web3Button>
+   
+    </div>
+    <h3 className="heading">Developed by Mirac.eth</h3>
     </div>
   )
 }

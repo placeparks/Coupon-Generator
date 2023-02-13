@@ -27,7 +27,7 @@ body {
   height: 25px;
   width: 300px;
 }
-.token, .user, .expire{
+.token, .user, .expire, .value{
   padding-right: 20px;
   font-size: 20px;
   padding-left: 50px;
@@ -47,6 +47,10 @@ body {
    padding-left: 50x;
    padding-right: 35px;
  }
+ .value{
+  padding-left: 50x;
+  padding-right: 49px;
+ }
  .btn{
   width: 150px;
   height: 30px;
@@ -54,9 +58,12 @@ body {
   margin-top: 50px;
 margin-left: 50px;
 }
+.heading{
+  margin-left: 180px;
+ }
  @media only screen and (max-width: 600px) {
   .expire{
-  margin-left: 90px;
+  margin-left: 110px;
   padding-right: 30px ;
   }
 
@@ -84,5 +91,11 @@ margin-left: 50px;
    .user{
     font-size: 20px;
     padding-left: 160px;
+   }
+   .value{
+   margin-left: 110px;
+   }
+   .heading{
+    margin-left: 150px;
    }
   }

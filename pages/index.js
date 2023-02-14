@@ -30,7 +30,7 @@ export default function Component() {
           <input
             className='inputs'
             type='text'
-            value={user}
+            value={value}
             onChange={(e) => setValue(e.target.value)}
             placeholder='Enter the coupon-value'
           /><br/>
